@@ -1,0 +1,200 @@
+/*
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.alignright {
+  float: right;
+  padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+  float: left;
+  padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+.demo-layout-transparent {
+  /*background: url('../images/poker.jpg') center / cover;*/
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+  background-color: rgb(38,166,91);
+}
+
+.mdl-layout__drawer-button {
+  display: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mdl-button--icon {
+  color: black;
+}
+
+.mdl-layout__drawer-button {
+  margin: 0;
+}
+
+.mini-butt {
+  display: none;
+}
+
+.tab-selector {
+  float: right;
+  display: inline;
+  position: absolute;
+}
+.card {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.add-bet {
+  margin: 20px 0px 0px 20px;
+}
+
+.bet-form {
+  margin: 0 auto;
+  width: 50%;
+  padding-left: 17px;
+  margin-bottom: 50px;
+  margin-top: 10px;
+  display: none;
+}
+
+.post {
+  margin-bottom: 8px;
+  background-color: rgb(89,171,227)
+}
+
+.winner {
+  background-color: rgb(58,83,155);
+  color: white;
+  float: right;
+}
+
+.loser {
+  background-color: rgb(246,36,89);
+  float: right;
+  margin-left: 8px;
+  color: white;
+}
+
+.won {
+  background-color: rgba(46,204,113,.75);
+  color: black;
+  font-weight: bold;
+}
+
+.loss {
+  background-color: rgba(246,36,89,.75);
+  color: white;
+  font-weight: bold;
+
+}
+
+.disabled {
+  display: disabled;
+}
+
+@media (max-width: 1025px) {
+  .mdl-layout__drawer-button {
+    display: block;
+    position: absolute;
+  }
+
+}
+
+@media (max-width: 740px) {
+
+  .card, .bet-form {
+  width: 75%;
+  }
+
+  .big-butt {
+    display: none;
+  }
+
+  .mini-butt {
+    display: block;
+  }
+
+  .add-bet {
+    margin: 10px 0px 0px 10px;
+  }
+
+}
+
+
+@media (max-width: 540px) {
+
+  .card {
+    width: 95%;
+  }
+
+  .bet-form {
+    width: 95%;
+  }
+
+  .mdl-tabs__tab {
+    font-size: 12px;
+    padding: 0 12px;
+
+  }
+
+  .mdl-tabs__tab-bar {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
+  .mdl-textfield__input {
+    font-size: 12px;
+    width: 75%;
+  }
+
+  .bet-form .mdl-card__title-text {
+    font-size: 16px;
+  }
+}
+
+

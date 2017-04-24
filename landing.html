@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Betcha!</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link rel="stylesheet" href="css/landing.css">
+</head>
+
+<body>
+	<div class="container">
+
+		<!-- Header Start -->
+		<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+		    <header class="mdl-layout__header mdl-layout__header--transparent">
+			    <div class="mdl-layout__header-row">
+			      <!-- Title -->
+			        <span class="mdl-layout-title">Betcha!</span>
+			      <!-- Add spacer, to align navigation to the right -->
+			        <div class="mdl-layout-spacer"></div>
+			      <!-- Navigation -->
+			        <nav class="mdl-navigation">
+			        	<a class="mdl-navigation__link" href="">About</a>
+				        <a class="mdl-navigation__link" href="">FAQ</a>
+				        <a class="mdl-navigation__link" href="">Leaderboard</a>
+				        <a class="mdl-navigation__link" href="">Sign Up</a>
+			        </nav>
+			    </div>
+
+		    </header>
+
+
+
+		<!-- Header End -->
+
+			<div class="mdl-layout__drawer">
+			    <span class="mdl-layout-title">Betcha!</span>
+			    <nav class="mdl-navigation">
+			      <a class="mdl-navigation__link" href="#all-panel">All Bets</a>
+			      <a class="mdl-navigation__link" href="#sports-panel">Sports</a>
+			      <a class="mdl-navigation__link" href="#vg-panel">Video Games</a>
+			      <a class="mdl-navigation__link" href="#friendly-panel">Friendly</a>
+			    </nav>			    
+			</div>
+
+		<!-- Main Body/Tabs Start -->
+
+			<main class="mdl-layout__content">
+
+				<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+
+				    <div class="mdl-tabs__tab-bar">
+				    	<a href="#all-panel" class="mdl-tabs__tab is-active">All</a>
+				    	<a href="#sports-panel" class="mdl-tabs__tab">Sports</a>
+				    	<a href="#vg-panel" class="mdl-tabs__tab">Gaming</a>
+				    	<a href="#stats-panel" class="mdl-tabs__tab">Stats</a>
+				    </div>
+
+
+			<!-- Add Button -->
+
+					<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored add-bet big-butt">
+	 						<i class="material-icons add">add</i>
+					</button>
+
+					<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored add-bet mini-butt">
+  						<i class="material-icons">add</i>
+					</button>
+
+			<!-- End Add Button -->
+
+
+
+			<!-- Hidden Input Form -->
+					<div class="demo-card-wide mdl-card mdl-shadow--2dp card bet-form">
+
+						<div class="mdl-card__title">
+						    	<h2 class="mdl-card__title-text">Create New Bet...</h2>
+						</div>
+
+						<form id="clear">
+							<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="title">
+								<label class="mdl-textfield__label" for="title">Title</label>
+						    </div>
+
+						    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+								<input class="mdl-textfield__input" type="text" id="description">
+								<label class="mdl-textfield__label" for="description">Description</label>
+						    </div>
+
+						    <div class="mdl-textfield mdl-js-textfield">
+								<select class="mdl-textfield__input" type="text" id="bet-type">
+									<option>Select Bet Type...</option>
+									<option>Sports</option>
+									<option>Video Game</option>
+								</select>
+						    </div>
+
+						    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+	    						<input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="amount">
+	    						<label class="mdl-textfield__label" for="amount">Bet Amount</label>
+	    						<span class="mdl-textfield__error">This needs to be a number!</span>
+	  						</div>
+	  						<br>
+	  						<button class="mdl-button mdl-js-button mdl-button--raised post">
+							  Post Bet
+							</button>
+						</form>
+					</div>
+
+			<!-- End input form -->
+
+
+				<!-- All Bets Panel -->
+
+					<div class="mdl-tabs__panel is-active" id="all-panel">
+
+		
+
+						
+					</div>
+
+					  <!-- Sports Panel -->
+					<div class="mdl-tabs__panel" id="sports-panel">
+
+
+					  	<!-- Bet 1 Card -->
+
+						<div class="demo-card-wide mdl-card mdl-shadow--2dp card">
+							<div class="mdl-card__title">
+						    	<h2 class="mdl-card__title-text">Mariners win world series</h2>
+						  	</div>
+
+						    <div class="mdl-card__supporting-text">
+						    $2 says the mariners win the world series. 
+						    </div>
+
+						    <div class="mdl-card__supporting-text amount">
+						  	    <span>Bet Amount:</span>
+						  	    <span type="number" class="bet-amount">5</span>
+						    </div>
+
+						    <div class="mdl-card__supporting-text amount">
+						    	<span class="bet-class">Bet Type:</span>
+						    	<span>Sports</span>
+						    </div>
+
+						    <div class="mdl-card__actions mdl-card--border">
+						        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect edit-bet" id="show-dialog">
+						        Edit Bet
+						        </a>
+
+						        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect loser">
+								  I Lose
+								</button>
+
+								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect winner">
+								  I Win 
+								</button>
+						    </div>
+
+						    <div class="mdl-card__menu">
+							    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+							      <i class="material-icons">share</i>
+							    </button>
+						  	</div>
+						</div>
+
+						<!-- Bet 2 Card -->
+
+						<div class="demo-card-wide mdl-card mdl-shadow--2dp card">
+						    <div class="mdl-card__title">
+						    	<h2 class="mdl-card__title-text">Wild Comeback</h2>
+						    </div>
+						    
+						    <div class="mdl-card__supporting-text">
+						    I bet the wild come back from 3-0 to win Round 1 of Stanley cup playoffs. 
+						    </div>
+						  
+						    <div class="mdl-card__supporting-text amount">
+						  		<span>Bet Amount:</span>
+						  		<span type="number" class="bet-amount">5</span>
+						    </div>
+						  
+						    <div class="mdl-card__actions mdl-card--border">
+						    	<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect edit-bet">
+						      Edit Bet
+						    	</a>
+
+						    	<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect loser">
+								  I Lose
+								</button>
+
+								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect winner">
+								  I Win 
+								</button>
+							</div>
+
+						    <div class="mdl-card__menu">
+						      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+						        <i class="material-icons">share</i>
+						      </button>
+						    </div>
+
+						</div>
+
+					</div>
+
+					  <!-- Video Game Panel -->
+					<div class="mdl-tabs__panel" id="vg-panel">
+					    
+
+					  	<!-- Bet 1 Card -->
+						<div class="demo-card-wide mdl-card mdl-shadow--2dp card">
+							<div class="mdl-card__title">
+						    	<h2 class="mdl-card__title-text">2k Takedown</h2>
+						    </div>
+						  
+						    <div class="mdl-card__supporting-text">
+						    	I bet I beat you by 10 points with the t-wolves.  
+						    </div>
+							<div class="mdl-card__supporting-text amount">
+								<span>Bet Amount:</span>
+								<span type="number" class="bet-amount">500</span>
+							</div>
+
+						    <div class="mdl-card__actions mdl-card--border">
+							    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect edit-bet">
+							      Edit Bet
+							    </a>
+
+							    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect loser">
+									  I Lose
+								</button>
+
+								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect winner">
+									  I Win 
+								</button>
+						    </div>
+
+						    <div class="mdl-card__menu">
+						      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+						        <i class="material-icons">share</i>
+						      </button>
+						    </div>
+						</div>
+
+						<!-- Bet 2 Card -->
+
+						<div class="demo-card-wide mdl-card mdl-shadow--2dp card">
+							<div class="mdl-card__title">
+						    	<h2 class="mdl-card__title-text">I have more of a life than you</h2>
+						    </div>
+						  
+						    <div class="mdl-card__supporting-text">
+						    	I bet my playtime is only half as much as yours.  
+						    </div>
+							<div class="mdl-card__supporting-text amount">
+								<span>Bet Amount:</span>
+								<span type="number" class="bet-amount">1000</span>
+							</div>
+
+						    <div class="mdl-card__actions mdl-card--border">
+							    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect edit-bet">
+							      Edit Bet
+							    </a>
+
+							    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect loser">
+									  I Lose
+								</button>
+
+								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect winner">
+									  I Win 
+								</button>
+						    </div>
+
+						    <div class="mdl-card__menu">
+						      <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+						        <i class="material-icons">share</i>
+						      </button>
+						    </div>
+						</div>
+					</div>
+					  <!-- Stats Panel -->
+					<div class="mdl-tabs__panel" id="stats-panel">
+
+						<div class="demo-card-wide mdl-card mdl-shadow--2dp card stats">
+							<div class="mdl-card__title">
+						    	<h2 class="mdl-card__title-text">Statistics</h2>
+						  	</div>
+
+
+						    <div class="mdl-card__supporting-text">
+						    	<span>Total Points: </span>
+						    	<span class="ttl-points">1000000</span>
+						    	<br>
+						    	<br>
+						    	<span>Bets Won: </span>
+						    	<span class="bets-won">0</span>
+						    	<br>
+						    	<br>
+						    	<span>Points Won: </span>
+						    	<span class="point-won">0</span>
+						    	<br>
+						    	<br>
+								<span>Bets Lost: </span>
+						    	<span class="bets-lost">0</span>
+								<br>
+								<br>
+								<span>Points Lost: </span>
+						    	<span class="point-lost">0</span>
+						    </div>
+
+
+						    <div class="mdl-card__menu">
+							    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+							      <i class="material-icons">share</i>
+							    </button>
+						  	</div>
+						</div>
+
+					
+				    </div>
+				</div>
+			</main>
+
+
+				<footer class="mdl-mini-footer">
+				    <div class="mdl-mini-footer__left-section">
+				    	<div class="mdl-logo">Betcha!</div>
+				    		<ul class="mdl-mini-footer__link-list">
+				      			<li><a href="#">Help</a></li>
+				      			<li><a href="#">Privacy & Terms</a></li>
+				    		</ul>
+				  	</div>
+			</footer>
+		</div>
+	</div>
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>
